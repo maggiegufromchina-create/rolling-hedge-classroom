@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2835b6" />
+  <meta name="description" content="金融衍生工具轮动套期保值课堂结果分享页" />
+  <title>轮动套保·课堂结果分享</title>
+  <style>
+    :root{--blue:#2835b6;--blue2:#0070c0;--ink:#25243a;--text:#404040;--muted:#6f7890;--line:#dce3fa;--pale:#f6f8ff;--gold:#d9a441;--green:#16866f;--red:#c54c55;--bg:#f2f5fb}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:16px 14px 40px}.hero{position:relative;overflow:hidden;padding:26px 22px 24px;border-radius:22px;color:#fff;background:linear-gradient(135deg,#202c9f,#425fdf 70%,#6985ed);box-shadow:0 12px 30px #2835b62a}.hero:after{content:"";position:absolute;width:240px;height:240px;border:38px solid #ffffff12;border-radius:50%;right:-110px;top:-110px}.brand{position:relative;z-index:1;font-size:12px;font-weight:700;letter-spacing:2px;opacity:.8}.hero h1{position:relative;z-index:1;margin:8px 0 3px;font-size:28px;line-height:1.3}.hero p{position:relative;z-index:1;margin:0;color:#e8ecff;font-size:13px;letter-spacing:1px}.time-badge{position:absolute;z-index:2;right:16px;bottom:16px;padding:5px 10px;border-radius:8px;background:var(--gold);font-size:12px;font-weight:700}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.step{padding:10px 6px;text-align:center;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:12px;color:var(--muted)}.step b{display:block;color:var(--blue);font-size:15px}.card{margin-top:14px;padding:18px;border:1px solid #e2e7f2;border-radius:18px;background:#fff;box-shadow:0 5px 18px #28355b0a}.card h2{margin:0 0 12px;color:var(--ink);font-size:19px}.card h3{margin:18px 0 8px;color:var(--blue);font-size:16px}.info-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:650;color:var(--ink)}input,textarea{width:100%;border:1.5px solid #cfd7e8;border-radius:11px;background:#fff;color:var(--ink);outline:none;transition:.2s}input{height:48px;padding:0 12px}textarea{min-height:96px;padding:12px;resize:vertical}input:focus,textarea:focus{border-color:var(--blue2);box-shadow:0 0 0 3px #0070c014}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:5px;border-radius:14px;background:#eef1f8}.tab{min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-weight:700}.tab.active{background:#fff;color:var(--blue);box-shadow:0 2px 8px #2835b616}.scenario{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--pale);font-size:14px}details{margin-top:12px;border:1px solid var(--line);border-radius:12px;overflow:hidden}summary{padding:12px 14px;color:var(--blue);font-weight:700;cursor:pointer;background:#fbfcff}.data-wrap{padding:0 12px 12px;overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}th,td{padding:9px 8px;border-bottom:1px solid #e5e9f1;text-align:center}th{background:var(--blue);color:#fff}th:first-child{border-radius:7px 0 0 0}th:last-child{border-radius:0 7px 0 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}.answer-field{padding:11px;border:1px solid #e2e7f2;border-radius:13px;background:#fff}.answer-field.correct{border-color:#a9d9cd;background:#f3fbf8}.answer-field.incorrect{border-color:#e7b9bd;background:#fff7f7}.answer-field.missing{border-color:var(--red)}.check-note{font-size:12px;margin-top:5px}.correct .check-note{color:var(--green)}.incorrect .check-note{color:var(--red)}.primary,.secondary,.ghost{min-height:50px;border-radius:12px;padding:0 16px;font-weight:750;border:0}.primary{width:100%;margin-top:16px;background:var(--blue);color:#fff;box-shadow:0 7px 16px #2835b62b}.secondary{background:#e9edff;color:var(--blue)}.ghost{background:#eef1f6;color:var(--muted)}.button-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.button-row.three{grid-template-columns:1fr 1fr}.button-row.three .primary{grid-column:1/-1;margin-top:0}.full{width:100%;margin-top:10px}.result-banner{display:flex;align-items:center;gap:12px;padding:14px;border-radius:13px;background:#eef8f5;color:var(--green)}.result-banner.has-error{background:#fff4f4;color:var(--red)}.result-banner strong{font-size:22px}.share-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff}.share-head{padding:20px;background:linear-gradient(135deg,#2835b6,#4c66d9);color:#fff}.share-head small{opacity:.8;letter-spacing:1px}.share-head h2{margin:5px 0 0;color:#fff;font-size:23px}.share-body{padding:18px}.student-line{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid var(--line);font-weight:700;color:var(--ink)}.metric{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed #e0e5ef}.metric span{color:var(--muted);font-size:14px}.metric b{text-align:right;color:var(--blue)}.conclusion{margin-top:14px;padding:13px;border-radius:11px;background:var(--pale);font-size:14px}.fine-print{margin:14px 2px 0;color:var(--muted);font-size:12px;text-align:center}.toast{position:fixed;z-index:20;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);max-width:calc(100% - 36px);padding:11px 18px;border-radius:12px;background:#25243a;color:#fff;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 25px #0003;font-size:14px;text-align:center}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.hidden{display:none!important}.required{color:var(--red)}@media(max-width:480px){.app{padding:10px 10px 30px}.hero{padding:22px 18px}.hero h1{font-size:24px}.time-badge{position:relative;right:auto;bottom:auto;display:inline-block;margin-top:14px}.card{padding:15px}.form-grid{gap:10px 8px}.answer-field{padding:9px}.field label{font-size:12px}input{padding:0 10px}.info-grid{grid-template-columns:1fr 1.3fr}.steps{gap:5px}.step{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="brand">金融衍生工具 · 课堂互动</div>
+      <h1>轮动套保：结果分享</h1>
+      <p>ROLLING HEDGE · CLASSROOM SHARE</p>
+      <div class="time-badge">结果填报 · 10 分钟</div>
+    </header>
+
+    <section class="steps" aria-label="使用步骤">
+      <div class="step"><b>01</b>填写结果</div>
+      <div class="step"><b>02</b>提交核对</div>
+      <div class="step"><b>03</b>生成分享卡</div>
+    </section>
+
+    <section class="card" aria-labelledby="student-title">
+      <h2 id="student-title">学生信息</h2>
+      <div class="info-grid">
+        <div class="field"><label for="group">小组</label><input id="group" placeholder="如：第 3 组" autocomplete="off" /></div>
+        <div class="field"><label for="name">姓名 <span class="required">*</span></label><input id="name" placeholder="填写姓名" autocomplete="name" /></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="tabs" role="tablist" aria-label="选择题目">
+        <button class="tab active" id="tab-q1" role="tab" aria-selected="true" data-q="q1">题一 · 卖出套保</button>
+        <button class="tab" id="tab-q2" role="tab" aria-selected="false" data-q="q2">题二 · 买入套保</button>
+      </div>
+      <div id="question-area"></div>
+    </section>
+
+    <section id="share-area" class="hidden" aria-live="polite"></section>
+    <p class="fine-print">数据仅保存在当前手机浏览器中，不会上传个人信息。</p>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module">
+    const questions = {
+      q1: {
+        tab: '题一 · 卖出套保', title: '第一题：卖出套期保值中的多次移仓',
+        scenario: '企业持有铜现货 1,000 吨，9 个月后出售。每次使用 200 手期货合约，在第 3、6 个月移仓。价格单位：元/吨。',
+        headers: ['时点','现货','第1份合约','第2份合约','第3份合约'],
+        rows: [['第0个月','70,000','70,500','—','—'],['第3个月','68,000','68,200','68,500','—'],['第6个月','66,000','—','66,300','66,600'],['第9个月','64,000','—','—','64,200']],
+        fields: [
+          ['leg1','第1份合约盈亏',2300,'元/吨'],['leg2','第2份合约盈亏',2200,'元/吨'],['leg3','第3份合约盈亏',2400,'元/吨'],
+          ['cumulative','累计期货盈利',6900,'元/吨'],['effective','有效销售价格',70900,'元/吨'],['net','套保组合净收入',7090,'万元'],
+          ['roll1','第一次移仓价差',300,'元/吨'],['roll2','第二次移仓价差',300,'元/吨'],['basis','最终基差',-200,'元/吨']
+        ],
+        conclusion: '两次移仓保持了空头套保的连续性。三段期货累计盈利 6,900 元/吨，最终有效销售价格为 70,900 元/吨。',
+        shareMetrics: [['累计期货盈利','6,900 元/吨'],['有效销售价格','70,900 元/吨'],['套保组合净收入','7,090 万元']]
+      },
+      q2: {
+        tab: '题二 · 买入套保', title: '第二题：买入套期保值中的移仓与未移仓比较',
+        scenario: '企业预计 6 个月后买入铝现货 2,000 吨。每次使用 400 手期货合约，在第 3 个月移仓。价格单位：元/吨。',
+        headers: ['时点','现货','第1份合约','第2份合约'],
+        rows: [['第0个月','18,500','18,580','—'],['第3个月','19,000','19,020','19,060'],['第6个月','19,600','—','19,580']],
+        fields: [
+          ['leg1','第1份合约盈亏',440,'元/吨'],['leg2','第2份合约盈亏',520,'元/吨'],['cumulative','累计期货盈利',960,'元/吨'],
+          ['effective','有效采购成本',18640,'元/吨'],['net','实际净采购支出',3728,'万元'],['noRoll','未移仓采购成本',19160,'元/吨'],
+          ['difference','未移仓增加成本',520,'元/吨'],['roll1','移仓价差',40,'元/吨'],['basis','最终基差',20,'元/吨']
+        ],
+        conclusion: '移仓使后 3 个月仍保留多头保护。正常移仓的有效采购成本为 18,640 元/吨，比未移仓方案低 520 元/吨。',
+        shareMetrics: [['累计期货盈利','960 元/吨'],['有效采购成本','18,640 元/吨'],['未移仓采购成本','19,160 元/吨']]
+      }
+    };
+
+    const defaultState = { current:'q1', group:'', name:'', answers:{q1:{},q2:{}}, submitted:{q1:false,q2:false} };
+    let state = structuredClone(defaultState);
+    try {
+      const saved = JSON.parse(localStorage.getItem('rollingHedgeClassroom') || 'null');
+      if (saved) state = {...state,...saved,answers:{...state.answers,...saved.answers},submitted:{...state.submitted,...saved.submitted}};
+    } catch(e) { console.warn('本地记录读取失败',e); }
+
+    const questionArea = document.querySelector('#question-area');
+    const shareArea = document.querySelector('#share-area');
+    const groupInput = document.querySelector('#group');
+    const nameInput = document.querySelector('#name');
+    const toastEl = document.querySelector('#toast');
+    let toastTimer;
+    const save = () => localStorage.setItem('rollingHedgeClassroom',JSON.stringify(state));
+    const esc = (value) => String(value ?? '').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+    const fmt = n => Number(n).toLocaleString('zh-CN');
+    const parseNumber = value => {
+      if (value == null || String(value).trim()==='') return null;
+      const normalized = String(value).replace(/[，,\s]/g,'').replace('−','-').replace('＋','+');
+      const n = Number(normalized);
+      return Number.isFinite(n) ? n : NaN;
+    };
+    function toast(message){clearTimeout(toastTimer);toastEl.textContent=message;toastEl.classList.add('show');toastTimer=setTimeout(()=>toastEl.classList.remove('show'),2400)}
+    function currentCorrectCount(qid){const q=questions[qid];return q.fields.filter(([id,,answer])=>Math.abs((parseNumber(state.answers[qid][id])??NaN)-answer)<0.001).length}
+    function shareText(qid){
+      const q=questions[qid], correct=currentCorrectCount(qid);
+      const identity=`${state.group||'未填写小组'} ${state.name}`.trim();
+      const metrics=q.shareMetrics.map(([k,v])=>`${k}：${v}`).join('\n');
+      const conclusion=document.querySelector('#conclusion')?.value.trim()||q.conclusion;
+      return `【轮动套保·课堂分享】\n${identity}\n${q.title}\n${metrics}\n结果核对：${correct}/${q.fields.length} 项一致\n我的结论：${conclusion}`;
+    }
+
+    function renderQuestion(){
+      const qid=state.current,q=questions[qid],submitted=state.submitted[qid];
+      document.querySelectorAll('.tab').forEach(btn=>{const active=btn.dataset.q===qid;btn.classList.toggle('active',active);btn.setAttribute('aria-selected',active)});
+      questionArea.innerHTML=`
+        <h3>${q.title}</h3><div class="scenario">${q.scenario}</div>
+        <details><summary>查看题目数据</summary><div class="data-wrap"><table><thead><tr>${q.headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${q.rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div></details>
+        <h3>填写你的计算结果</h3>
+        <div class="form-grid">${q.fields.map(([id,label,answer,unit])=>{
+          const value=state.answers[qid][id]??'',num=parseNumber(value),correct=Math.abs(num-answer)<0.001;
+          const cls=submitted?(correct?'correct':'incorrect'):'';
+          return `<div class="field answer-field ${cls}" data-field="${id}"><label for="${qid}-${id}">${label}（${unit}）</label><input id="${qid}-${id}" data-answer="${id}" inputmode="decimal" autocomplete="off" placeholder="填数字" value="${esc(value)}" ${submitted?'readonly':''}/>${submitted?`<div class="check-note">${correct?'✓ 结果一致':`参考结果：${fmt(answer)} ${unit}`}</div>`:''}</div>`
+        }).join('')}</div>
+        ${submitted?`<div class="result-banner ${currentCorrectCount(qid)===q.fields.length?'':'has-error'}" style="margin-top:16px"><strong>${currentCorrectCount(qid)}/${q.fields.length}</strong><span>项结果一致。你可以返回修改，或生成课堂分享卡。</span></div>`:''}
+        <button id="submit-btn" class="primary">${submitted?'重新生成分享卡':'提交并生成分享卡'}</button>
+        ${submitted?`<button id="edit-btn" class="ghost full">修改本题答案</button>`:''}
+        <button id="reset-btn" class="ghost full">清空本题答案</button>`;
+      questionArea.querySelectorAll('[data-answer]').forEach(input=>input.addEventListener('input',e=>{state.answers[qid][e.target.dataset.answer]=e.target.value;save();e.target.closest('.answer-field').classList.remove('missing')}));
+      document.querySelector('#submit-btn').addEventListener('click',submitAnswers);
+      document.querySelector('#edit-btn')?.addEventListener('click',()=>{state.submitted[qid]=false;save();shareArea.classList.add('hidden');renderQuestion()});
+      document.querySelector('#reset-btn').addEventListener('click',()=>{if(confirm('确定清空本题的填写内容吗？')){state.answers[qid]={};state.submitted[qid]=false;save();shareArea.classList.add('hidden');renderQuestion();toast('本题已清空')}});
+      if(submitted) renderShare();
+    }
+
+    function submitAnswers(){
+      const qid=state.current,q=questions[qid];
+      if(!state.name.trim()){nameInput.focus();toast('请先填写姓名');return}
+      let missing=0,invalid=0;
+      q.fields.forEach(([id])=>{const n=parseNumber(state.answers[qid][id]);if(n===null)missing++;else if(Number.isNaN(n))invalid++});
+      questionArea.querySelectorAll('.answer-field').forEach(el=>el.classList.remove('missing'));
+      if(missing||invalid){
+        q.fields.forEach(([id])=>{const n=parseNumber(state.answers[qid][id]);if(n===null||Number.isNaN(n))questionArea.querySelector(`[data-field="${id}"]`).classList.add('missing')});
+        toast(`还有 ${missing+invalid} 项需要填写或修正`);return;
+      }
+      state.submitted[qid]=true;save();renderQuestion();
+      setTimeout(()=>shareArea.scrollIntoView({behavior:'smooth',block:'start'}),80);
+    }
+
+    function renderShare(){
+      const qid=state.current,q=questions[qid],correct=currentCorrectCount(qid);
+      shareArea.className='card';
+      shareArea.innerHTML=`<div class="share-card"><div class="share-head"><small>金融衍生工具 · 课堂结果分享</small><h2>${q.tab}</h2></div><div class="share-body"><div class="student-line">${esc(state.group||'未分组')} · ${esc(state.name)}</div>${q.shareMetrics.map(([k,v])=>`<div class="metric"><span>${k}</span><b>${v}</b></div>`).join('')}<div class="metric"><span>结果核对</span><b>${correct}/${q.fields.length} 项一致</b></div><div class="field" style="margin-top:14px"><label for="conclusion">我的课堂结论</label><textarea id="conclusion">${esc(q.conclusion)}</textarea></div></div></div>
+        <div class="button-row three"><button id="native-share" class="primary">分享结果</button><button id="copy-share" class="secondary">复制文字</button><button id="download-share" class="secondary">下载分享卡</button></div>`;
+      document.querySelector('#native-share').addEventListener('click',nativeShare);
+      document.querySelector('#copy-share').addEventListener('click',copyShare);
+      document.querySelector('#download-share').addEventListener('click',()=>downloadCard(qid));
+    }
+
+    async function nativeShare(){
+      const text=shareText(state.current);
+      if(navigator.share){try{await navigator.share({title:'轮动套保·课堂结果分享',text});toast('已打开系统分享')}catch(e){if(e.name!=='AbortError')copyShare()}}
+      else copyShare();
+    }
+    async function copyShare(){
+      const text=shareText(state.current);
+      try{await navigator.clipboard.writeText(text);toast('结果已复制，可粘贴到班级群')}
+      catch(e){const box=document.createElement('textarea');box.value=text;document.body.appendChild(box);box.select();document.execCommand('copy');box.remove();toast('结果已复制')}
+    }
+    function downloadCard(qid){
+      const q=questions[qid],canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1440;const ctx=canvas.getContext('2d');
+      ctx.fillStyle='#f2f5fb';ctx.fillRect(0,0,1080,1440);
+      const gradient=ctx.createLinearGradient(0,0,1080,400);gradient.addColorStop(0,'#2835b6');gradient.addColorStop(1,'#5872df');ctx.fillStyle=gradient;roundRect(ctx,60,70,960,360,34);ctx.fill();
+      ctx.fillStyle='#e8ecff';ctx.font='26px sans-serif';ctx.fillText('金融衍生工具 · 课堂结果分享',110,140);
+      ctx.fillStyle='#ffffff';ctx.font='bold 48px sans-serif';ctx.fillText('轮动套期保值',110,215);ctx.font='32px sans-serif';ctx.fillText(q.tab,110,278);
+      ctx.font='28px sans-serif';ctx.fillText(`${state.group||'未分组'} · ${state.name}`,110,340);
+      ctx.fillStyle='#ffffff';roundRect(ctx,60,460,960,870,34);ctx.fill();
+      let y=550;ctx.font='30px sans-serif';
+      q.shareMetrics.forEach(([k,v])=>{ctx.fillStyle='#6f7890';ctx.fillText(k,110,y);ctx.fillStyle='#2835b6';ctx.font='bold 34px sans-serif';ctx.textAlign='right';ctx.fillText(v,970,y);ctx.textAlign='left';ctx.font='30px sans-serif';y+=95});
+      ctx.fillStyle='#6f7890';ctx.fillText('结果核对',110,y);ctx.fillStyle='#2835b6';ctx.font='bold 34px sans-serif';ctx.textAlign='right';ctx.fillText(`${currentCorrectCount(qid)}/${q.fields.length} 项一致`,970,y);ctx.textAlign='left';y+=85;
+      ctx.fillStyle='#25243a';ctx.font='bold 30px sans-serif';ctx.fillText('我的课堂结论',110,y);y+=50;
+      ctx.fillStyle='#404040';ctx.font='28px sans-serif';const conclusion=document.querySelector('#conclusion')?.value.trim()||q.conclusion;wrapText(ctx,conclusion,110,y,860,46);
+      ctx.fillStyle='#6f7890';ctx.font='22px sans-serif';ctx.textAlign='center';ctx.fillText('提交后核对 · 结果仅保存在学生本人手机',540,1380);
+      const link=document.createElement('a');link.download=`轮动套保分享卡_${state.name}.png`;link.href=canvas.toDataURL('image/png');link.click();toast('分享卡已生成');
+    }
+    function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r)}
+    function wrapText(ctx,text,x,y,maxWidth,lineHeight){let line='',yy=y;for(const char of text){const test=line+char;if(ctx.measureText(test).width>maxWidth&&line){ctx.fillText(line,x,yy);line=char;yy+=lineHeight}else line=test}if(line)ctx.fillText(line,x,yy)}
+
+    document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{state.current=btn.dataset.q;save();shareArea.classList.add('hidden');renderQuestion()}));
+    groupInput.value=state.group;nameInput.value=state.name;
+    groupInput.addEventListener('input',e=>{state.group=e.target.value;save()});nameInput.addEventListener('input',e=>{state.name=e.target.value;save()});
+    renderQuestion();
+  </script>
+</body>
+</html>
